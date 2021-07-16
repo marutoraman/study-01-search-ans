@@ -27,14 +27,13 @@ def read_source(csv_path:str):
     with open(csv_path, 'r', encoding="utf-8_sig") as f:
         return f.read().splitlines() # readでファイル読み込み、splitlinesで１行づつに分解してlistとして返す
 
-
 def write_source(csv_path:str, source:list):
     '''
     sourceをcsvに書き込む
     '''
-    with open(csv_path, 'w', encoding="utf-8_sig") as f:
+    with open(csv_path, mode='w', encoding="utf-8_sig") as f:
         f.write("\n".join(source)) # listを改行(\n)で連結してファイルに書き込む
-        
+
     # 特に戻り値が必要ない場合はreturnは省略できる、その場合はNoneが返る
 
 
